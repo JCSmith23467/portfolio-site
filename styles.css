@@ -1,0 +1,288 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F8F9FA;
+    color: #212529;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+}
+
+.nav-toggle {
+    display: none;
+    background-color: #fff;
+    color: #007BFF;
+    border: none;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+nav {
+    margin-top: 1em;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #17A2B8;
+}
+
+ul {
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+li {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-position: inside;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+		left: 10px;
+		right: auto;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav.active {
+        display: flex;
+    }
+}
+
+section {
+    padding: 2em;
+    margin: 2em 0;
+}
+
+h2, h3 {
+    color: #007BFF;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+#about p {
+    text-align: center;
+    line-height: 2;
+}
+
+.project p, .project ul {
+	display: block;
+	line-height: 2;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.project p.show, .project ul.show {
+    opacity: 1;
+    max-height: 2000px; /* Arbitrary large value to ensure full height */
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.project {
+    text-align: center;
+    width: 30%;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project h3 {
+    position: relative; /* Required for positioning the tooltip */
+    transition: transform 0.3s ease; /* Smooth transition for enlargement */
+}
+
+.project h3:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+.tooltip {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 100%; /* Position above the h3 element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.project h3:hover .tooltip {
+    display: block; /* Show tooltip on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    margin: 0.5em 0 0.2em;
+}
+
+input, textarea {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.7em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #6C757D;
+    color: #fff;
+}
+
+#back-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #007BFF; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#back-to-top:hover {
+    background-color: #0056b3; /* Add a dark-blue background on hover */
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #212529;
+    color: #F8F9FA;
+}
+
+header.dark-theme {
+    background-color: #343A40;
+}
+
+nav a.dark-theme {
+    color: #F8F9FA;
+}
+
+nav a.dark-theme:hover {
+    color: #007BFF;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #343A40;
+    color: #F8F9FA;
+}
+
+#theme-toggle:hover {
+    background-color: #495057;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+	
+	#about p, .project p, .project ul {
+		font-size: 0.9em;
+		line-height: 3;
+	}
+	
+	.project p, .project ul {
+		opacity: 1;
+		max-height: none;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .projects-container {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+	
+	.project p, .project ul {
+		opacity: 1;
+		max-height: none;
+	}
+}

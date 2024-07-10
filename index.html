@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Smith - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Justin Smith</h1>
+        <p>Front-End Web Developer</p>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello, I'm Justin Smith, a web developer passionate about creating engaging and user-friendly websites.<br> Graduating from Western Illinois University with a Bachelor's in Science, I continued my eductaion at Oakton College earning a Certificate in Technology.<br> My education has allowed me to specialize in front-end development as well as experience with HTML, CSS, JavaScript, Bootstrap, Wordpress, and SQL.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <a href="https://jcsmith23467.github.io/Fitness-Website/" target="_blank">
+                    <img src="fitness.png" alt="Fitness organization">
+                </a>
+				<h3>Forward Fitness Club <span class="tooltip">Click to reveal details</span></h3>
+                <p>Designed with Bootstrap using the carousel template to create a website for a fitness organization.</p>
+				<ul>
+					<li>Homepage welcoming visitors and highlighting services like group fitness, personal training, and nutrition planning.</li>
+					<li>About us page detailing the mission and facilities of the club while providing info about the different types of equipment available. Emphasizes the benefits of personal training.</li>
+					<li>A Classes page presenting a schedule of group fitness classes, offering details about class types, times, instructions, and locations.</li>
+					<li>Nutrition page offering guidance on nutrition and healthy eating habits. Provides a sample nutrition guide and featured meal of the week.</li>
+					<li>Contact page contains an embeded Google map for easy location finding and includes a form for inquiries and free trial registration.</li>
+				</ul>
+            </div>
+            <div class="project">
+                <a href="https://jcsmith23467.github.io/space-site/index.html" target="_blank">
+                    <img src="project2.png" alt="Astronomy website">
+                </a>
+				<h3>Planetary Society of America <span class="tooltip">Click to reveal details</span></h3>
+                <p>Utilizes a wide range of HTML elements, CSS properties, and JavaScript programming to form a comprehensive website dedicated to astronomy and space exploration.</p>
+				<ul>
+					<li>Main homepage introducing the Planetary Society of America, featuring navigation links to various sections and a slideshow of astronomical images.</li>
+					<li>A page dedicated to providing the latest alerts on astronomical events such as comet approaches, asteroid passes, magnetic pole shifts, and solar wind events. It includes a script to dynamically display the current date.</li>
+					<li>A contact page where users can fill out a form to contact the Planetary Society, including fields for personal details and a section for comments or questions.</li>
+					<li>An educational page that offers basic information on astronomy, descriptions of famous telescopes, and biographies of historical astronomers. It aims to educate both adults and children about astronomy.</li>
+					<li>A registration page for seminars offered by the Planetary Society. It includes a form for users to sign up for seminars, calculate costs, and details on different events.</li>
+					<li>A shopping page where users can browse and purchase products related to astronomy, such as binoculars, telescopes, books, and educational materials. It includes a form for selecting products and calculating the total cost of the order.</li>
+				</ul>
+            </div>
+            <div class="project">
+                <a href="https://dev-jsmith3432.pantheonsite.io/" target="_blank">
+                    <img src="fansite.png" alt="Godzilla fan-site">
+                </a>
+				<h3>Godzilla Fan-Site <span class="tooltip">Click to reveal details</span></h3>
+                <p>Built with the Wordpress content management system to create a mock website dedicated to the iconic monster Godzilla.</p>
+				<ul>
+					<li>Home page detailing site features and nav links to organization's history and contact information.</li>
+					<li>About us page listing organization's goals, responsibilities, and values.</li>
+					<li>Contact page for inqueries and questions in regards to social events and about the organization itself.</li>
+					<li>Web page dedicated to news surrounding future projects as well as reviews of Godzilla merch (i.e., movies, comics, and video games).</li>
+					<li>Community Events page which details planned social events such as movie screenings.</li>
+					<li>Page dedicated to the historical background of the iconic monster focusing on key events leading to its creation.</li>
+				</ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="46ea4722-9140-4f79-9639-41d43efc9889">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Justin Smith. All rights reserved.</p>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
